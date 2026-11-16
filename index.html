@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10131a" />
+  <meta name="description" content="株式会社WIARの売上アップ無料診断。客単価・見込客・成約率を10点満点で自己評価し、今注力すべき経営戦略を見つけましょう。" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="WIAR経営診断" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WIAR 売上アップ無料診断 | 今、何に取り組むべき？" />
+  <meta property="og:description" content="客単価・見込客・成約率の3つを自己評価。1点改善の効果を比べて、取り組むべき経営戦略を無料診断。" />
+  <meta property="og:locale" content="ja_JP" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <title>売上アップ無料診断 | 株式会社WIAR</title>
+  <style>
+    :root { color-scheme: light; --ink:#181a21; --sub:#636977; --orange:#ef6a23; --orange2:#ff9d55; --dark:#111721; --border:#e9e9ed; --surface:#fff; --cream:#fff8f3; --bg:#f7f8fa; --green:#167b60; }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family: -apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",Meiryo,sans-serif; line-height:1.7; -webkit-font-smoothing:antialiased; }
+    button,a { -webkit-tap-highlight-color:transparent; }
+    button { font:inherit; }
+    a { color:inherit; }
+    button:focus-visible,a:focus-visible { outline:3px solid #fcaa5f; outline-offset:3px; }
+    .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+    .header { background:#fff; border-bottom:1px solid #ededf0; }
+    .header .inner { min-height:82px; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { display:inline-flex; align-items:center; gap:11px; text-decoration:none; }
+    .brand-icon { display:grid; place-items:center; width:41px; height:41px; background:linear-gradient(135deg,#fead68,#e85c24); border-radius:11px; color:#fff; font-weight:950; font-size:24px; letter-spacing:-.1em; padding-right:3px; box-shadow:0 5px 12px #ef6a2330; }
+    .brand-word { display:flex; flex-direction:column; line-height:1.2; }
+    .brand-word b { font-family:Arial,Helvetica,sans-serif; font-size:22px; font-weight:900; letter-spacing:.08em; }
+    .brand-word small { font-size:10px; letter-spacing:.02em; color:#7c8190; font-weight:700; margin-top:4px; }
+    .header-note { font-weight:800; font-size:12px; background:#fff3e8; color:#b95621; border-radius:999px; padding:7px 12px; }
+    .hero { background:radial-gradient(circle at 86% 29%,#733c29 0, transparent 38%), linear-gradient(125deg,#171d29 4%,#10151e 70%); color:#fff; overflow:hidden; }
+    .hero-inner { min-height:364px; padding-top:65px; padding-bottom:57px; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(270px,.75fr); align-items:center; gap:50px; }
+    .eyebrow { color:#ffc292; font-size:12px; font-weight:900; letter-spacing:.17em; margin:0 0 12px; }
+    h1 { margin:0; font-size:clamp(32px,4.2vw,50px); line-height:1.39; letter-spacing:-.05em; font-weight:900; }
+    h1 em { color:#ffae65; font-style:normal; }
+    .hero-desc { max-width:560px; color:#d4d7de; margin:19px 0 0; font-size:14px; }
+    .hero-tags { display:flex; gap:8px; flex-wrap:wrap; margin-top:22px; }
+    .hero-tags span { font-size:11px; font-weight:800; color:#f4dacc; border:1px solid #796458; border-radius:999px; padding:5px 12px; }
+    .visual { min-width:0; max-width:330px; justify-self:center; width:100%; }
+    .visual-card { position:relative; padding:24px; border-radius:22px; border:1px solid #ffffff25; background:linear-gradient(125deg,#34313bdf,#242936aa); box-shadow:0 25px 60px #0005; transform:rotate(-3deg); }
+    .visual-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; color:#d4d6dc; font-size:12px; font-weight:800; }
+    .dots { display:flex; gap:4px; }
+    .dots i { width:6px; height:6px; border-radius:50%; background:#8e8e9c; }
+    .equation { font-family:Arial,sans-serif; font-weight:900; letter-spacing:-.03em; font-size:24px; margin-bottom:24px; }
+    .equation b { color:#ff9958; }
+    .chart-bars { display:flex; align-items:flex-end; gap:13px; height:94px; border-bottom:1px solid #53515c; padding-bottom:2px; }
+    .chart-bars .bar { width:25%; border-radius:8px 8px 0 0; background:linear-gradient(to top,#a45135,#ffae70); }
+    .bar.b1 { height:45%; } .bar.b2 { height:75%; } .bar.b3 { height:100%; } .bar.b4 { height:67%; }
+    .visual-foot { margin:13px 0 0; font-size:11px; text-align:right; color:#ffc292; font-weight:800; }
+    .main { padding:47px 0 80px; }
+    .intro { text-align:center; max-width:680px; margin:0 auto 26px; }
+    .step { display:inline-block; font-weight:900; font-size:11px; letter-spacing:.13em; color:#dc6223; margin-bottom:7px; }
+    h2 { font-size:clamp(25px,3vw,33px); margin:0; line-height:1.4; letter-spacing:-.04em; }
+    .intro p { margin:10px 0 0; font-size:14px; color:var(--sub); }
+    .formula { background:#fff; border:1px solid var(--border); border-radius:16px; max-width:650px; margin:0 auto 27px; padding:17px 24px; text-align:center; box-shadow:0 8px 24px #1b293208; }
+    .formula .txt { font-size:10px; color:#888b95; font-weight:800; letter-spacing:.13em; }
+    .formula .value { font-size:clamp(18px,3vw,26px); font-weight:900; letter-spacing:-.04em; }
+    .formula .value span { color:#e96c2e; }
+    .rating-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:15px; align-items:stretch; }
+    .rating-card { padding:24px 19px 23px; background:var(--surface); border:1px solid var(--border); border-radius:17px; box-shadow:0 7px 30px #132b3c08; }
+    .rating-head { display:flex; align-items:center; justify-content:space-between; gap:6px; }
+    .rating-no { width:30px; height:30px; flex-shrink:0; display:grid; place-items:center; border-radius:9px; color:#e97234; background:#fff0e5; font-size:12px; font-weight:900; }
+    .rating-value { white-space:nowrap; font-size:13px; color:#8a8f9b; font-weight:800; }
+    .rating-value strong { font-size:31px; font-weight:900; color:#e96b2d; line-height:1; }
+    .rating-card h3 { font-size:22px; line-height:1.35; letter-spacing:-.03em; margin:20px 0 8px; }
+    .rating-card p { min-height:76px; font-size:12px; color:#68707c; margin:0 0 20px; }
+    .scale { display:grid; grid-template-columns:repeat(5,minmax(0,1fr)); gap:7px; }
+    .scale button { height:40px; background:#f7f8fa; border:1px solid #eceef0; border-radius:9px; color:#5a606c; font-size:13px; font-weight:800; cursor:pointer; transition:background .16s,color .16s,border-color .16s,transform .16s; }
+    .scale button:hover { background:#fff0e4; border-color:#f9bb8c; }
+    .scale button[aria-pressed=true] { border-color:#ed762e; color:white; background:linear-gradient(135deg,#f39a4f,#eb6a2d); box-shadow:0 3px 8px #dc753c38; }
+    .scale button:active { transform:scale(.96); }
+    .end-label { display:flex; justify-content:space-between; margin-top:11px; color:#999da5; font-size:10px; font-weight:700; }
+    .submit-bar { display:flex; flex-direction:column; align-items:center; gap:8px; margin:31px auto 0; text-align:center; }
+    .primary-btn,.mail-btn { display:inline-flex; justify-content:center; align-items:center; gap:9px; min-height:56px; padding:12px 31px; border:0; border-radius:12px; font-size:15px; font-weight:900; text-decoration:none; color:white; background:linear-gradient(110deg,#f18d45,#ea6429); box-shadow:0 8px 19px #e96b2c36; cursor:pointer; transition:transform .16s,box-shadow .16s,opacity .16s; }
+    .primary-btn:hover:not(:disabled),.mail-btn:hover { transform:translateY(-2px); box-shadow:0 12px 24px #e96b2c40; }
+    .primary-btn:disabled { background:#aeb2bc; box-shadow:none; cursor:not-allowed; }
+    .minor { font-size:12px; color:#818693; margin:0; }
+    .result { display:none; margin-top:60px; scroll-margin-top:25px; }
+    .result.show { display:block; animation:fadeUp .4s ease both; }
+    @keyframes fadeUp { from { opacity:0; transform:translateY(15px); } to { opacity:1; transform:translateY(0); } }
+    .result-heading { text-align:center; margin-bottom:23px; }
+    .result-heading h2 { margin-top:3px; }
+    .result-panel { padding:38px; background:white; border-radius:24px; border:1px solid #ece9e5; box-shadow:0 15px 40px #1d25310b; }
+    .result-summary { padding:28px; border-radius:17px; background:linear-gradient(115deg,#fff9f2,#fff1e5); border:1px solid #fce6d4; }
+    .result-label { display:inline-flex; align-items:center; background:#fce0c8; color:#b54e1c; border-radius:999px; padding:5px 12px; font-size:11px; font-weight:900; letter-spacing:.04em; }
+    .result-summary h3 { font-size:clamp(25px,3vw,34px); line-height:1.4; margin:13px 0 10px; letter-spacing:-.045em; }
+    .result-summary p { color:#745b4e; margin:0; font-size:13px; }
+    .strategy-list { display:grid; gap:13px; margin:20px 0 0; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    .strategy-card { display:flex; gap:12px; padding:19px; border:1px solid #f2e4d9; border-radius:13px; background:#fffaf5; }
+    .strategy-icon { width:38px; height:38px; background:#ffeadc; border-radius:11px; color:#d35e2a; display:grid; place-items:center; font-weight:900; font-size:18px; flex-shrink:0; }
+    .strategy-card h4 { margin:0 0 4px; font-size:15px; }
+    .strategy-card .s-note { margin:0 0 7px; color:#c55c29; font-weight:900; font-size:12px; }
+    .strategy-card p { font-size:12px; line-height:1.8; margin:0; color:#62656e; }
+    .score-heading { font-size:18px; font-weight:900; margin:34px 0 4px; }
+    .score-caption { font-size:12px; color:var(--sub); margin:0 0 20px; }
+    .comparison { display:grid; gap:21px; }
+    .compare-head { display:flex; justify-content:space-between; gap:12px; align-items:baseline; margin-bottom:9px; }
+    .compare-head span { font-size:13px; font-weight:800; }
+    .compare-head strong { font-size:17px; font-variant-numeric:tabular-nums; }
+    .compare-head small { color:var(--green); font-weight:900; font-size:11px; margin-left:5px; }
+    .track { height:15px; border-radius:999px; background:#f0f1f4; overflow:hidden; }
+    .fill { height:100%; background:linear-gradient(90deg,#b3b8c2,#788291); border-radius:999px; transition:width .65s ease; }
+    .compare-item.winner .fill { background:linear-gradient(90deg,#f6a15f,#e9602c); }
+    .compare-item.winner .compare-head span::after { content:" 優先"; display:inline-block; margin-left:8px; font-size:10px; background:#fff0e7; color:#d85c24; padding:1px 7px; border-radius:999px; }
+    .note-box { margin:24px 0 0; padding:14px 17px; border-radius:12px; background:#f7f8fa; color:#676d79; font-size:11px; line-height:1.8; }
+    .cta { background:#141a24; color:#fff; padding:34px; border-radius:21px; margin-top:23px; text-align:center; }
+    .cta .cta-kicker { color:#ffad7e; font-size:12px; font-weight:900; letter-spacing:.12em; }
+    .cta h3 { font-size:clamp(21px,3vw,29px); margin:10px 0; line-height:1.5; }
+    .cta p { color:#c7cbd2; font-size:13px; margin:0 auto 23px; max-width:580px; }
+    .cta .mail-btn { width:min(100%,390px); }
+    .cta .cta-foot { margin-top:13px; font-size:11px; color:#a1a7b2; }
+    .sub-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:11px; margin-top:20px; }
+    .sub-actions button { background:white; border:1px solid #e3e5e8; border-radius:10px; padding:11px 17px; color:#59606a; font-size:12px; font-weight:800; cursor:pointer; }
+    .sub-actions button:hover { background:#fff4eb; color:#d9602b; }
+    .foot { padding:26px 0 35px; background:#fff; border-top:1px solid #e8e8ec; color:#9297a0; }
+    .foot .inner { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:11px; }
+    .foot b { color:#454953; font-family:Arial,Helvetica,sans-serif; letter-spacing:.09em; font-size:15px; }
+    @media(max-width:900px) { .rating-grid { grid-template-columns:1fr; max-width:540px; margin:0 auto; } .rating-card { padding:22px 24px; } .rating-card p { min-height:0; margin-bottom:18px; } .scale { grid-template-columns:repeat(10,minmax(0,1fr)); gap:5px; } .scale button { height:39px; } .result-panel { padding:25px; } }
+    @media(max-width:670px) { .wrap { padding:0 17px; } .header .inner { min-height:69px; } .brand-icon { width:37px; height:37px; } .brand-word b { font-size:19px; } .header-note { font-size:10px; } .hero-inner { display:block; padding-top:47px; padding-bottom:44px; min-height:unset; } .hero-desc { font-size:13px; } .visual { display:none; } .main { padding-top:37px; padding-bottom:55px; } .formula { padding:15px 9px; } .rating-card { padding:22px 17px; } .scale { grid-template-columns:repeat(5,minmax(0,1fr)); gap:8px; } .scale button { height:44px; } .result-panel { padding:19px 14px; border-radius:17px; } .result-summary { padding:24px 17px; } .cta { padding:29px 17px; } .foot .inner { align-items:flex-start; flex-direction:column; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; animation:none!important; } }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap inner">
+      <a class="brand" href="#top" aria-label="株式会社WIAR ホームへ">
+        <span class="brand-icon" aria-hidden="true">W</span>
+        <span class="brand-word"><b>WIAR</b><small>株式会社WIAR</small></span>
+      </a>
+      <span class="header-note">登録不要・完全無料</span>
+    </div>
+  </header>
+  <section class="hero" id="top">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">BUSINESS GROWTH DIAGNOSIS</p>
+        <h1>売上を伸ばすなら、<br><em>何から始める？</em></h1>
+        <p class="hero-desc">集客も、商品力も、営業も。全部を同時に改善するのは難しいから。たった3つの自己評価から、今あなたの会社が優先すべき経営戦略を見つけます。</p>
+        <div class="hero-tags"><span>約1分で診断</span><span>3項目を10点で評価</span><span>改善の優先順位がわかる</span></div>
+      </div>
+      <div class="visual" aria-hidden="true">
+        <div class="visual-card">
+          <div class="visual-top"><span>GROWTH INSIGHT</span><span class="dots"><i></i><i></i><i></i></span></div>
+          <div class="equation">売上 <b>=</b> 3つの掛け算</div>
+          <div class="chart-bars"><div class="bar b1"></div><div class="bar b2"></div><div class="bar b3"></div><div class="bar b4"></div></div>
+          <p class="visual-foot">FOCUS ON THE NEXT +1</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="wrap main">
+    <section id="diagnosis" aria-labelledby="form-title">
+      <div class="intro">
+        <span class="step">STEP 01 · 自社の現状をチェック</span>
+        <h2 id="form-title">3つの項目に点数をつける</h2>
+        <p>直感でOK。今の自社の「満足度」を、1点（低い）〜10点（高い）で自己評価してください。</p>
+      </div>
+      <div class="formula" aria-label="診断の計算式：売上の考え方は客単価かける見込客かける成約率">
+        <div class="txt">売上をつくる3つの要素</div>
+        <div class="value"><span>客単価</span> × <span>見込客</span> × <span>成約率</span></div>
+      </div>
+      <div class="rating-grid" id="rating-grid">
+        <section class="rating-card" data-metric="price" aria-labelledby="title-price">
+          <div class="rating-head"><span class="rating-no">01</span><span class="rating-value" id="value-price"><strong>—</strong> / 10</span></div>
+          <h3 id="title-price">客単価</h3>
+          <p>商品・サービスの価値を伝え、適切な価格で選ばれていると思いますか？</p>
+          <div class="scale" role="group" aria-label="客単価の満足度を1〜10点で選択" data-scale="price"></div>
+          <div class="end-label"><span>1 · 満足していない</span><span>10 · とても満足</span></div>
+        </section>
+        <section class="rating-card" data-metric="leads" aria-labelledby="title-leads">
+          <div class="rating-head"><span class="rating-no">02</span><span class="rating-value" id="value-leads"><strong>—</strong> / 10</span></div>
+          <h3 id="title-leads">見込客</h3>
+          <p>自社の商品・サービスに関心がある人から、十分に問い合わせや相談を獲得できていますか？</p>
+          <div class="scale" role="group" aria-label="見込客の満足度を1〜10点で選択" data-scale="leads"></div>
+          <div class="end-label"><span>1 · 満足していない</span><span>10 · とても満足</span></div>
+        </section>
+        <section class="rating-card" data-metric="close" aria-labelledby="title-close">
+          <div class="rating-head"><span class="rating-no">03</span><span class="rating-value" id="value-close"><strong>—</strong> / 10</span></div>
+          <h3 id="title-close">成約率</h3>
+          <p>問い合わせ・商談・提案から、十分な割合で契約や購入につなげられていますか？</p>
+          <div class="scale" role="group" aria-label="成約率の満足度を1〜10点で選択" data-scale="close"></div>
+          <div class="end-label"><span>1 · 満足していない</span><span>10 · とても満足</span></div>
+        </section>
+      </div>
+      <div class="submit-bar">
+        <button type="button" class="primary-btn" id="diagnose" disabled>無料診断の結果を見る <span aria-hidden="true">→</span></button>
+        <p class="minor" id="progress" aria-live="polite">あと3項目入力してください</p>
+      </div>
+    </section>
+
+    <section class="result" id="result" aria-live="polite" aria-labelledby="result-title">
+      <div class="result-heading"><span class="step">STEP 02 · あなたの会社の診断結果</span><h2 id="result-title">優先すべき経営戦略は？</h2></div>
+      <div class="result-panel">
+        <div class="result-summary"><span class="result-label">最優先の改善テーマ</span><h3 id="winners-title"></h3><p id="winners-reason"></p></div>
+        <div class="strategy-list" id="strategy-list"></div>
+        <h3 class="score-heading">「＋1点」でどれだけ変わる？</h3>
+        <p class="score-caption">3つを同時に上げるのではなく、1項目ずつ＋1した場合の診断スコアを比較しています。</p>
+        <div class="comparison" id="comparison"></div>
+        <div class="note-box"><strong>診断について：</strong>入力した点数は自己評価であり、計算結果は売上金額や実際の売上増加率の予測ではありません。「どこから改善を始めるか」を考えるための簡易指標です。10点を選んだ項目も、比較計算では仮に11点として試算しています。</div>
+        <div class="cta">
+          <div class="cta-kicker">NEXT ACTION</div>
+          <h3>次の一歩を、WIARと。</h3>
+          <p>診断で見えた課題を、具体的な成長戦略へ。ブランド・マーケティング・セールスの視点から、一緒に改善の方向性を考えます。</p>
+          <a class="mail-btn" id="mail-link" href="mailto:info@wiar-co-ltd.com">株式会社WIARに無料相談する <span aria-hidden="true">↗</span></a>
+          <div class="cta-foot">メールアプリが設定されている端末では、宛先と診断結果が入った下書きが開きます。送信はお客様ご自身で行います。</div>
+        </div>
+        <div class="sub-actions"><button type="button" id="copy-result">診断結果をコピー</button><button type="button" id="reset">点数を変更して再診断</button></div>
+      </div>
+    </section>
+  </main>
+  <footer class="foot"><div class="wrap inner"><b>WIAR</b><span>© <span id="year"></span> 株式会社WIAR · 売上アップ無料診断</span><span>入力された点数はサーバーへ送信・保存されません。</span></div></footer>
+  <script>
+    (() => {
+      'use strict';
+      const destination = 'info@wiar-co-ltd.com';
+      const defs = [
+        { key:'price', name:'客単価', strategy:'ブランド戦略', icon:'◆', advice:'強み・独自性・選ばれる理由を言語化し、価格ではなく「価値」で選ばれる商品設計と見せ方を整えましょう。' },
+        { key:'leads', name:'見込客', strategy:'マーケティング戦略', icon:'◎', advice:'理想の顧客像を明確にして、SNS・ホームページ・検索などの接点から問い合わせまでの流れを強化しましょう。' },
+        { key:'close', name:'成約率', strategy:'セールス戦略', icon:'↗', advice:'商談の進め方、提案資料、実績の伝え方、見積り後のフォローを整え、成約につながる営業導線をつくりましょう。' }
+      ];
+      const score = { price:null, leads:null, close:null };
+      const fmt = n => n.toLocaleString('ja-JP');
+      const $ = id => document.getElementById(id);
+      const comparison = $('comparison');
+      let lastResultText = '';
+      const escapeHtml = str => String(str).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      $('year').textContent = String(new Date().getFullYear());
+
+      for (const def of defs) {
+        const el = document.querySelector(`[data-scale="${def.key}"]`);
+        for (let n=1; n<=10; n++) {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = String(n);
+          button.setAttribute('aria-label', `${def.name}の満足度 ${n}点`);
+          button.setAttribute('aria-pressed', 'false');
+          button.dataset.value = String(n);
+          button.addEventListener('click', () => {
+            score[def.key] = n;
+            for (const b of el.querySelectorAll('button')) b.setAttribute('aria-pressed', String(Number(b.dataset.value)===n));
+            $(`value-${def.key}`).innerHTML = `<strong>${n}</strong> / 10`;
+            const left = defs.filter(d => score[d.key] === null).length;
+            $('diagnose').disabled = left !== 0;
+            $('progress').textContent = left ? `あと${left}項目入力してください` : '入力完了！診断結果をご確認ください';
+            // Input changes are not silently applied to an already displayed result.
+            $('result').classList.remove('show');
+          });
+          el.append(button);
+        }
+      }
+      function makeDiagnosis() {
+        if (defs.some(d => score[d.key] === null)) return;
+        const {price:p, leads:l, close:c} = score;
+        const current = p*l*c;
+        const candidates = {price:(p+1)*l*c, leads:p*(l+1)*c, close:p*l*(c+1)};
+        const maximum = Math.max(...Object.values(candidates));
+        const winners = defs.filter(d => candidates[d.key] === maximum);
+        $('winners-title').textContent = winners.map(w => w.name).join('・') + 'を伸ばしましょう';
+        $('winners-reason').textContent = winners.length === 1
+          ? `${winners[0].name}を1点高めた場合、診断スコアは${fmt(current)}点から${fmt(maximum)}点へ。3項目の中で最も大きな伸びとなります。`
+          : `${winners.map(w=>w.name).join('と')}が同率1位。どちらか取り組みやすい1つを選ぶのがおすすめです。診断スコアは${fmt(current)}点から${fmt(maximum)}点へ。`;
+        $('strategy-list').innerHTML = winners.map(w => `<article class="strategy-card"><div class="strategy-icon" aria-hidden="true">${escapeHtml(w.icon)}</div><div><h4>${escapeHtml(w.name)}の改善には</h4><p class="s-note">${escapeHtml(w.strategy)}に取り組む</p><p>${escapeHtml(w.advice)}</p></div></article>`).join('');
+        const rows = [{key:null,name:'現在のスコア',value:current},...defs.map(d => ({key:d.key,name:`${d.name}を＋1点`,value:candidates[d.key]}))];
+        comparison.innerHTML = rows.map(r => {
+          const best = r.key && r.value === maximum;
+          const pct = Math.max(0,Math.min(100,100*r.value/maximum));
+          const delta = r.key ? `<small>+${fmt(r.value-current)}点</small>` : '';
+          return `<div class="compare-item ${best?'winner':''}"><div class="compare-head"><span>${escapeHtml(r.name)}</span><strong>${fmt(r.value)} pt ${delta}</strong></div><div class="track"><div class="fill" style="width:${pct.toFixed(2)}%"></div></div></div>`;
+        }).join('');
+        const details = [`客単価: ${p}/10`, `見込客: ${l}/10`, `成約率: ${c}/10`];
+        const calculated = [`現状: ${fmt(current)}pt`, ...defs.map(d => `${d.name}＋1点: ${fmt(candidates[d.key])}pt`)];
+        const bestNames = winners.map(w=>w.name).join('・');
+        const strategyNames = [...new Set(winners.map(w => w.strategy))].join('・');
+        lastResultText = [
+          '【株式会社WIAR 売上アップ無料診断】',
+          '',
+          '■ 現在の自己評価', ...details,
+          '',
+          '■ 診断スコア（自己評価の掛け算）', ...calculated,
+          '',
+          `■ 優先して改善したい項目: ${bestNames}`,
+          `■ おすすめの戦略: ${strategyNames}`,
+          '',
+          '※実際の売上金額・増加率を予測するものではありません。'
+        ].join('\n');
+        const body = [
+          '株式会社WIAR ご担当者様',
+          '',
+          '売上アップ無料診断の結果について、無料相談を希望します。',
+          '',
+          lastResultText,
+          '',
+          '【ご相談内容】',
+          '（こちらにご記入ください）',
+          '',
+          '【会社名】',
+          '【お名前】',
+          '【ご連絡先】'
+        ].join('\n');
+        $('mail-link').href = `mailto:${destination}?subject=${encodeURIComponent('【売上アップ無料診断】経営戦略の無料相談')}&body=${encodeURIComponent(body)}`;
+        $('result').classList.add('show');
+        $('result').scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+      }
+      $('diagnose').addEventListener('click', makeDiagnosis);
+      $('copy-result').addEventListener('click', async () => {
+        const btn = $('copy-result');
+        try {
+          if (navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(lastResultText);
+          else {
+            const temp = document.createElement('textarea'); temp.value = lastResultText; temp.style.position='fixed'; temp.style.left='-9999px';
+            document.body.append(temp); temp.select();
+            if (!document.execCommand('copy')) throw new Error('コピーできませんでした');
+            temp.remove();
+          }
+          btn.textContent = 'コピーしました ✓';
+        } catch (err) { btn.textContent = 'コピーできません。メールから送信してください'; }
+        window.setTimeout(() => btn.textContent = '診断結果をコピー', 2600);
+      });
+      $('reset').addEventListener('click', () => {
+        $('result').classList.remove('show');
+        $('diagnosis').scrollIntoView({behavior:'smooth',block:'start'});
+        $('progress').textContent = '点数を選び直して「無料診断の結果を見る」を押してください';
+      });
+    })();
+  </script>
+  <script>
+    // HTTPS環境でのみ有効になるオフライン利用（診断結果は端末内のみで処理）
+    if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
